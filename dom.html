@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate new element</title>
+</head>
+<body>
+    <ul>
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function GenerateNewElement(elementName,listItems){
+        listItems.forEach(element => {
+            let elementname = document.createElement(elementName);
+        console.log(elementname);
+        elementname.style.backgroundColor = 'red'
+        elementname.innerText = element
+        document.querySelector('ul').append(elementname);
+        });
+    }
+    GenerateNewElement("li",['Java','Angular','Express']);
+</script>
+</html>
